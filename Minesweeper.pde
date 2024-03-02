@@ -50,24 +50,20 @@ public boolean isWon()
   }
   return true;
 }
-public void displayLosingMessage()
-{
-    //your code here
-    String lose = " You Lose! L bozo";
-    for (int i = 1; i < NUM_COLS; i++) {
-      
-      buttons[NUM_COLS / 2][i].setLabel(lose.substring(i - 1, i));
-    }
+public void displayLosingMessage() {
+    String lose = "You Lose!";
+    fill(255, 0, 0); // Red color
+    textSize(40);
+    text(lose, width / 2, height / 2);
 }
-public void displayWinningMessage()
-{
-    //your code here
-    String win = "     You Win!";
-    if (isWon())
-     for (int i = 0; i < NUM_COLS; i++) {
-      buttons[NUM_COLS / 2][i].setLabel(win.substring(i - 1, i));
-    }
+
+public void displayWinningMessage() {
+    String win = "You Win!";
+    fill(0, 255, 0); // Green color
+    textSize(40);
+    text(win, width / 2, height / 2);
 }
+
 public boolean isValid(int r, int c)
 {
     //your code here
